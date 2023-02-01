@@ -1,0 +1,195 @@
+openapi: 3.0.1
+info:
+  title: Public Webhooks API
+  description: "## Public Api for Webhooks.\n\n#### Replace existing webhook\nTo replace an existing webhook first add the new webhook, then delete the old one when you're ready."
+servers:
+  - url: https://api.vipps.no
+    description: Production (Prod)
+  - url: https://apitest.vipps.no
+    description: Test (MT)
+paths:
+  /v1/webhooks:
+    get:
+      tags:
+        - v1
+      summary: Get all registered webhooks
+      parameters:
+        - name: Merchant-Serial-Number
+          in: header
+          required: true
+          style: simple
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/QueryResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/VippsValidationProblemDetails'
+    post:
+      tags:
+        - v1
+      summary: Register webhook
+      parameters:
+        - name: Merchant-Serial-Number
+          in: header
+          required: true
+          style: simple
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RegisterRequest'
+        required: true
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RegisterResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/VippsValidationProblemDetails'
+  '/v1/webhooks/{id}':
+    delete:
+      tags:
+        - v1
+      summary: Delete webhook
+      parameters:
+        - name: id
+          in: path
+          required: true
+          style: simple
+          schema:
+            type: string
+            format: uuid
+        - name: Merchant-Serial-Number
+          in: header
+          required: true
+          style: simple
+          schema:
+            type: string
+      responses:
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/VippsValidationProblemDetails'
+components:
+  schemas:
+    ExtraDetail:
+      required:
+        - name
+        - reason
+      type: object
+      properties:
+        name:
+          type: string
+          example: Url
+        reason:
+          type: string
+          example: Property is mandatory and cannot be null or empty.
+      additionalProperties: false
+    QueryResponse:
+      required:
+        - webhooks
+      type: object
+      properties:
+        webhooks:
+          type: array
+          items:
+            $ref: '#/components/schemas/Webhook'
+      additionalProperties: false
+    RegisterRequest:
+      required:
+        - events
+        - url
+      type: object
+      properties:
+        url:
+          type: string
+          format: uri
+          example: https://www.example.com/webhook-callback
+        events:
+          type: array
+          items:
+            type: string
+          example:
+            - service.payment.captured.v1
+            - service.payment.created.v2
+      additionalProperties: false
+    RegisterResponse:
+      required:
+        - id
+        - secret
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        secret:
+          type: string
+          example: 090a478d-37ff-4e77-970e-d457aeb26a3a
+      additionalProperties: false
+    VippsValidationProblemDetails:
+      type: object
+      properties:
+        type:
+          type: string
+          nullable: true
+          example: 00-bb841c551513e233de8a01472013fa9f-542c71e40916a6ce-00
+        title:
+          type: string
+          nullable: true
+          example: Bad Request
+        status:
+          type: integer
+          format: int32
+          nullable: true
+          example: 400
+        detail:
+          type: string
+          nullable: true
+          example: One or more validation errors occured.
+        instance:
+          type: string
+          nullable: true
+          example: /v1/webhooks
+        traceId:
+          type: string
+          nullable: true
+          example: 00-bb841c551513e233de8a01472013fa9f-542c71e40916a6ce-00
+        extraDetails:
+          type: array
+          items:
+            $ref: '#/components/schemas/ExtraDetail'
+          nullable: true
+      additionalProperties: false
+    Webhook:
+      required:
+        - id
+        - url
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        url:
+          type: string
+          format: uri
+          example: https://www.example.com/callbacks
+      additionalProperties: false
