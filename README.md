@@ -19,6 +19,6 @@ allowed, see the API reference for the exact limit.
 ## Index
 
 - [Introduction](webhooks-api)
-- [Events](webhooks-api/events)
+- [Event Types](webhooks-api/events)
 - [Frequent Asked Questions](webhooks-api/faq)
 - [API Reference](/api/webhooks)
