@@ -15,6 +15,5 @@ you want to replace.
 You can now verify that the new url works as expected before deleting the old
 webhook.
 
-Please do not let an obsolete webhook return 404s since this will trigger
-monitoring and look an issue which may prompt us to reach out needless. 
-
+Please do not let an obsolete webhook return 404s, since that may be
+misclassified a real incident requiring us to reach out needlessly. 
