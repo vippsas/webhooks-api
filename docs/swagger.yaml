@@ -123,7 +123,7 @@ components:
         url:
           type: string
           format: uri
-          example: https://www.example.com/webhook-callback
+          example: https://example.com/webhook-callback
         events:
           type: array
           items:
@@ -191,5 +191,5 @@ components:
         url:
           type: string
           format: uri
-          example: https://www.example.com/callbacks
+          example: https://example.com/callbacks
       additionalProperties: false
