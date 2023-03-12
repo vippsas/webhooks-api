@@ -1,19 +1,35 @@
+
+<!-- START_METADATA
 ---
-title: FAQ
+title: Webhooks API Frequently Asked Questions
+sidebar_label: FAQ
 sidebar_position: 3
+description: Frequently asked questions for the Webhooks API.
+pagination_next: null
+pagination_prev: null
 ---
+END_METADATA -->
 
-- [How to replace a webhook](#how-to-replace-a-webhook)
 
+# Frequently asked questions
+
+Here are the Report API Frequently Asked Questions (FAQ).
+
+<!-- START_COMMENT -->
+
+ℹ️ Please use the website:
+[Vipps MobilePay Technical Documentation](https://vippsas.github.io/vipps-developer-docs).
+
+<!-- END_COMMENT -->
 
 ## How to replace a webhook
 
 To replace a webhook, you should register a new webhook for the same events,
-after registration the new webhook will recieve the same traffic as the webhook
+after registration the new webhook will receive the same traffic as the webhook
 you want to replace.
 
 You can now verify that the new url works as expected before deleting the old
 webhook.
 
 Please do not let an obsolete webhook return 404s, since that may be
-misclassified a real incident requiring us to reach out needlessly. 
+misclassified a real incident requiring us to reach out needlessly.
