@@ -1,10 +1,13 @@
+<!-- START_METADATA
 ---
-title: Introduction
+title: Introduction to the Webhooks API
+sidebar_label: Introduction
 sidebar_position: 1
 hide_table_of_contents: true
-pagination_prev: null
 pagination_next: null
+pagination_prev: null
 ---
+END_METADATA -->
 
 # Webhooks API [BETA]
 
