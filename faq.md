@@ -10,7 +10,19 @@ pagination_prev: null
 ---
 END_METADATA -->
 
-# How to replace a webhook
+
+# Frequently asked questions
+
+Here are the Report API Frequently Asked Questions (FAQ).
+
+<!-- START_COMMENT -->
+
+ℹ️ Please use the website:
+[Vipps MobilePay Technical Documentation](https://vippsas.github.io/vipps-developer-docs).
+
+<!-- END_COMMENT -->
+
+## How to replace a webhook
 
 To replace a webhook, you should register a new webhook for the same events,
 after registration the new webhook will receive the same traffic as the webhook

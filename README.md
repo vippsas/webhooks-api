@@ -11,12 +11,14 @@ END_METADATA -->
 
 # Webhooks API [BETA]
 
+💥 Work in progress 💥
+
 An API to register one or more callback urls per named event per sales unit.
 
 As an example a merchant can register a callback url for receiving a callback
-when any of the payments of the merchant is captured. 
+when any of the payments of the merchant is captured.
 
-There is a set limit on how many registrations per event typer per sales unit
+There is a set limit on how many registrations per event types per sales unit
 allowed, see the API reference for the exact limit.
 
 ## Index
