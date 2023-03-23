@@ -1,12 +1,12 @@
 <!-- START_METADATA
 ---
+title: Webhooks API Events
+sidebar_label: Events
 sidebar_position: 2
 pagination_next: null
 pagination_prev: null
 ---
 END_METADATA -->
-
-# Event Types
 
 💥 Work in progress 💥
 
