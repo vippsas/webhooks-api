@@ -14,6 +14,6 @@ The current list of event types that can be subscribed to.
 
 | Source Api | Event Type                    | Reference                                                                                             |
 | ---------- | ----------------------------- | ----------------------------------------------------------------------------------------------------- |
-| ePayments  | epayments.payment.captured.v1 | [capture callback](/vipps-developer-docs/api/epayment#tag/QueryPayments/operation/getPaymentEventLog) |
+| ePayments  | epayments.payment.captured.v1 | [capture callback](https://vippsas.github.io/vipps-developer-docs/api/epayment#tag/QueryPayments/operation/getPaymentEventLog) |
 
 
