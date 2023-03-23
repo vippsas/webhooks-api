@@ -1,19 +1,24 @@
+<!-- START_METADATA
 ---
-title: Introduction
 sidebar_position: 1
 hide_table_of_contents: true
-pagination_prev: null
 pagination_next: null
+pagination_prev: null
 ---
+END_METADATA -->
 
-# Webhooks API [BETA]
+# Introduction
 
-An API to register one or more callback urls per named event per sales unit.
+💥 Work in progress 💥
 
-As an example a merchant can register a callback url for receiving a callback
-when any of the payments of the merchant is captured. 
+You can **subscribe** to published **event types** by registering webhooks and
+will then be **notified** when any matching events are published for payments
+that match the given sales unit id.
 
-There is a set limit on how many registrations per event typer per sales unit
+As an example, a merchant can register a callback url to receive a callback when
+any of the payments of the merchant is captured.
+
+There is a set limit on how many registrations per event types per sales unit
 allowed, see the API reference for the exact limit.
 
 ## Index

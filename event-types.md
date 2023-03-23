@@ -1,12 +1,19 @@
+<!-- START_METADATA
 ---
-title: Events
 sidebar_position: 2
+pagination_next: null
+pagination_prev: null
 ---
+END_METADATA -->
 
-The public event types a webhook can be registered for.
+# Event Types
 
-## Published Events
+💥 Work in progress 💥
 
-| Source Api | Event Type               | Reference                                                                                                    |
-| ---------- | ------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| ECom       | ecom.payments.capture.v1 | [ecom capture callback](/vipps-developer-docs/api/ecom#tag/Vipps-eCom-API/operation/capturePaymentUsingPOST) |
+The current list of event types that can be subscribed to.
+
+| Source Api | Event Type                    | Reference                                                                                             |
+| ---------- | ----------------------------- | ----------------------------------------------------------------------------------------------------- |
+| ePayments  | epayments.payment.captured.v1 | [capture callback](/vipps-developer-docs/api/epayment#tag/QueryPayments/operation/getPaymentEventLog) |
+
+
