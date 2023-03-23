@@ -1,7 +1,8 @@
 openapi: 3.0.1
 info:
   title: Public Webhooks API
-  description: "## Public Api for Webhooks.\n\n#### Replace existing webhook\nTo replace an existing webhook first add the new webhook, then delete the old one when you're ready."
+  description: Webhooks API
+  version: v1
 servers:
   - url: https://api.vipps.no
     description: Production (Prod)
@@ -32,7 +33,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/VippsValidationProblemDetails'
+                $ref: '#/components/schemas/ProblemDetails'
     post:
       tags:
         - v1
@@ -62,7 +63,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/VippsValidationProblemDetails'
+                $ref: '#/components/schemas/ProblemDetails'
   '/v1/webhooks/{id}':
     delete:
       tags:
@@ -88,7 +89,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/VippsValidationProblemDetails'
+                $ref: '#/components/schemas/ProblemDetails'
 components:
   schemas:
     ExtraDetail:
@@ -103,6 +104,40 @@ components:
         reason:
           type: string
           example: Property is mandatory and cannot be null or empty.
+      additionalProperties: false
+    ProblemDetails:
+      type: object
+      properties:
+        type:
+          type: string
+          nullable: true
+          example: 00-bb841c551513e233de8a01472013fa9f-542c71e40916a6ce-00
+        title:
+          type: string
+          nullable: true
+          example: Bad Request
+        status:
+          type: integer
+          format: int32
+          nullable: true
+          example: 400
+        detail:
+          type: string
+          nullable: true
+          example: One or more validation errors occured.
+        instance:
+          type: string
+          nullable: true
+          example: /v1/webhooks
+        traceId:
+          type: string
+          nullable: true
+          example: 00-bb841c551513e233de8a01472013fa9f-542c71e40916a6ce-00
+        extraDetails:
+          type: array
+          items:
+            $ref: '#/components/schemas/ExtraDetail'
+          nullable: true
       additionalProperties: false
     QueryResponse:
       required:
@@ -145,42 +180,9 @@ components:
           type: string
           example: 090a478d-37ff-4e77-970e-d457aeb26a3a
       additionalProperties: false
-    VippsValidationProblemDetails:
-      type: object
-      properties:
-        type:
-          type: string
-          nullable: true
-          example: 00-bb841c551513e233de8a01472013fa9f-542c71e40916a6ce-00
-        title:
-          type: string
-          nullable: true
-          example: Bad Request
-        status:
-          type: integer
-          format: int32
-          nullable: true
-          example: 400
-        detail:
-          type: string
-          nullable: true
-          example: One or more validation errors occured.
-        instance:
-          type: string
-          nullable: true
-          example: /v1/webhooks
-        traceId:
-          type: string
-          nullable: true
-          example: 00-bb841c551513e233de8a01472013fa9f-542c71e40916a6ce-00
-        extraDetails:
-          type: array
-          items:
-            $ref: '#/components/schemas/ExtraDetail'
-          nullable: true
-      additionalProperties: false
     Webhook:
       required:
+        - events
         - id
         - url
       type: object
@@ -192,4 +194,11 @@ components:
           type: string
           format: uri
           example: https://example.com/callbacks
+        events:
+          type: array
+          items:
+            type: string
+          example:
+            - service.payment.captured.v1
+            - service.payment.created.v2
       additionalProperties: false
