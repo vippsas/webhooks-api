@@ -2,6 +2,7 @@
 ---
 title: Introduction to the Webhooks API
 sidebar_label: Introduction
+description: Intro
 sidebar_position: 1
 hide_table_of_contents: true
 pagination_next: null
