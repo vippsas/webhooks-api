@@ -2,7 +2,6 @@
 ---
 title: Webhooks API Frequently Asked Questions
 sidebar_label: FAQ
-description: FAQ
 sidebar_position: 3
 pagination_next: null
 pagination_prev: null
