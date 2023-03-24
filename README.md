@@ -9,6 +9,8 @@ pagination_prev: null
 ---
 END_METADATA -->
 
+# Webhooks API
+
 💥 Work in progress 💥
 
 You can **subscribe** to published **event types** by registering webhooks and
