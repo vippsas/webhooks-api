@@ -22,10 +22,3 @@ any of the payments of the merchant is captured.
 
 There is a set limit on how many registrations per event types per sales unit
 allowed, see the API reference for the exact limit.
-
-## Index
-
-- [Introduction](webhooks-api)
-- [Event Types](webhooks-api/events)
-- [Frequent Asked Questions](webhooks-api/faq)
-- [API Reference](/api/webhooks)
