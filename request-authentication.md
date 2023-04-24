@@ -1,4 +1,3 @@
-<!-- START_METADATA
 ---
 title: Webhooks API Request Authentication
 sidebar_label: Request Authentication
@@ -6,7 +5,6 @@ sidebar_position: 3
 pagination_next: null
 pagination_prev: null
 ---
-END_METADATA -->
 
 # Request authentication
 
