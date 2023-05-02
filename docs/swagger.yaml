@@ -21,6 +21,38 @@ paths:
           style: simple
           schema:
             type: string
+        - name: Vipps-System-Name
+          in: header
+          description: "The name of the ecommerce solution.\nOne word in lowercase letters is good.\nSee [http-headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers)."
+          style: simple
+          schema:
+            maxLength: 30
+            type: string
+            example: woocommerce
+        - name: Vipps-System-Version
+          in: header
+          description: "The version number of the ecommerce solution.\nSee [http-headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers)."
+          style: simple
+          schema:
+            maxLength: 30
+            type: string
+            example: '5.4.0'
+        - name: Vipps-System-Plugin-Name
+          in: header
+          description: "The name of the ecommerce plugin (if applicable).\nOne word in lowercase letters is good.\nSee [http-headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers)."
+          style: simple
+          schema:
+            maxLength: 30
+            type: string
+            example: vipps-woocommerce
+        - name: Vipps-System-Plugin-Version
+          in: header
+          description: "The version number of the ecommerce plugin (if applicable).\nSee [http-headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers)."
+          style: simple
+          schema:
+            maxLength: 30
+            type: string
+            example: '1.2.1'
       responses:
         '200':
           description: Success
@@ -45,6 +77,38 @@ paths:
           style: simple
           schema:
             type: string
+        - name: Vipps-System-Name
+          in: header
+          description: "The name of the ecommerce solution.\nOne word in lowercase letters is good.\nSee [http-headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers)."
+          style: simple
+          schema:
+            maxLength: 30
+            type: string
+            example: woocommerce
+        - name: Vipps-System-Version
+          in: header
+          description: "The version number of the ecommerce solution.\nSee [http-headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers)."
+          style: simple
+          schema:
+            maxLength: 30
+            type: string
+            example: '5.4.0'
+        - name: Vipps-System-Plugin-Name
+          in: header
+          description: "The name of the ecommerce plugin (if applicable).\nOne word in lowercase letters is good.\nSee [http-headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers)."
+          style: simple
+          schema:
+            maxLength: 30
+            type: string
+            example: vipps-woocommerce
+        - name: Vipps-System-Plugin-Version
+          in: header
+          description: "The version number of the ecommerce plugin (if applicable).\nSee [http-headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers)."
+          style: simple
+          schema:
+            maxLength: 30
+            type: string
+            example: '1.2.1'
       requestBody:
         content:
           application/json:
@@ -83,6 +147,38 @@ paths:
           style: simple
           schema:
             type: string
+        - name: Vipps-System-Name
+          in: header
+          description: "The name of the ecommerce solution.\nOne word in lowercase letters is good.\nSee [http-headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers)."
+          style: simple
+          schema:
+            maxLength: 30
+            type: string
+            example: woocommerce
+        - name: Vipps-System-Version
+          in: header
+          description: "The version number of the ecommerce solution.\nSee [http-headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers)."
+          style: simple
+          schema:
+            maxLength: 30
+            type: string
+            example: '5.4.0'
+        - name: Vipps-System-Plugin-Name
+          in: header
+          description: "The name of the ecommerce plugin (if applicable).\nOne word in lowercase letters is good.\nSee [http-headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers)."
+          style: simple
+          schema:
+            maxLength: 30
+            type: string
+            example: vipps-woocommerce
+        - name: Vipps-System-Plugin-Version
+          in: header
+          description: "The version number of the ecommerce plugin (if applicable).\nSee [http-headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers)."
+          style: simple
+          schema:
+            maxLength: 30
+            type: string
+            example: '1.2.1'
       responses:
         '400':
           description: Bad Request
@@ -124,7 +220,7 @@ components:
         detail:
           type: string
           nullable: true
-          example: One or more validation errors occurred.
+          example: One or more validation errors occured.
         instance:
           type: string
           nullable: true
