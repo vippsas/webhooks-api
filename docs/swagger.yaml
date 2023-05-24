@@ -220,7 +220,7 @@ components:
         detail:
           type: string
           nullable: true
-          example: One or more validation errors occured.
+          example: One or more validation errors occurred.
         instance:
           type: string
           nullable: true
