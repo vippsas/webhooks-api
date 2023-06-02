@@ -4,9 +4,9 @@ info:
   description: Webhooks API
   version: v1
 servers:
-  - url: https://api.vipps.no
+  - url: https://api.vipps.no/webhooks
     description: Production (Prod)
-  - url: https://apitest.vipps.no
+  - url: https://apitest.vipps.no/webhooks
     description: Test (MT)
 paths:
   /v1/webhooks:
@@ -180,6 +180,8 @@ paths:
             type: string
             example: '1.2.1'
       responses:
+        '204':
+          description: No Content
         '400':
           description: Bad Request
           content:
