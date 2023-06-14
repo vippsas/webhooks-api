@@ -14,7 +14,7 @@ END_METADATA -->
 
 The current list of event types that can be subscribed to.
 
-## ePayments
+## ePayment
 
 | Name       | Event Type                      | Reference                                                                                          |
 | ---------- | ------------------------------- | -------------------------------------------------------------------------------------------------- |
