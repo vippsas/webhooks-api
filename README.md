@@ -15,9 +15,9 @@ END_METADATA -->
 
 You can **subscribe** to published **event types** by registering webhooks and
 will then be **notified** when any matching events are published that match the
-given sales unit id.
+given sales unit ID.
 
-As an example, a merchant can register a callback url to receive a callback when
+As an example, a merchant can register a callback URL to receive a callback when
 any of the payments of the merchant is captured.
 
 There is a set limit on how many registrations per event types per sales unit

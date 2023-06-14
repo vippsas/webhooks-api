@@ -13,10 +13,11 @@ END_METADATA -->
 A notification request from webhooks can be verified using the following
 headers, 'host', 'x-ms-date', 'x-ms-content-sha256' and 'authorization' with the
 unique secret received when the webhook was registered. The authorization is a
-sha256 HMAC hash of request date, content and uri that is created using the
+sha256 HMAC hash of request date, content and URI that is created using the
 webhook secret.
 
-## Summary pseudo code
+## Summary pseudocode
+
 ```cmd
 let contentHash = hash(serializedContent)
 
