@@ -199,10 +199,10 @@ components:
       properties:
         name:
           type: string
-          example: Url
+          example: url
         reason:
           type: string
-          example: Property is mandatory and cannot be null or empty.
+          example: The property is mandatory and cannot be null or empty.
       additionalProperties: false
     ProblemDetails:
       type: object
@@ -256,6 +256,12 @@ components:
       properties:
         url:
           type: string
+          description: |-
+            The URL that updates should be sent to.
+            Must be a valid, world-reachable URL.
+            The URL must use HTTPS.
+            Can not be a URL that redirects to a different URL.
+            We don't send requests to all ports, so to be safe use common ports such as: 80, 443, 8080.
           format: uri
           example: https://example.com/webhook-callback
         events:
