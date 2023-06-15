@@ -70,6 +70,7 @@ paths:
       tags:
         - v1
       summary: Register webhook
+      description: 'At most 5 webhooks can currently be registered per event, please reach out if a higher limit is required.'
       parameters:
         - name: Merchant-Serial-Number
           in: header
