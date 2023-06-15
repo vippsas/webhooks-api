@@ -18,5 +18,4 @@ given sales unit ID.
 As an example, a merchant can register a callback URL to receive a callback when
 any of the merchant's payments are captured.
 
-There is a set limit on how many registrations per event types per sales unit
-are allowed. See the API reference for the exact limit.
+You can register for 5 webhooks per event type for each sales unit.
