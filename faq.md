@@ -10,8 +10,6 @@ END_METADATA -->
 
 # Frequently asked questions
 
-💥 Work in progress 💥
-
 ## How to replace a webhook
 
 To replace a webhook, you can register a new webhook for the same event type,
