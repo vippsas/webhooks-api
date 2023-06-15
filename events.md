@@ -10,8 +10,6 @@ END_METADATA -->
 
 # Events
 
-💥 Work in progress 💥
-
 The current list of event types that can be subscribed to.
 
 ## ePayment

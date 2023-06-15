@@ -11,14 +11,12 @@ END_METADATA -->
 
 # Webhooks API
 
-💥 Work in progress 💥
-
-You can **subscribe** to published **event types** by registering webhooks and
-will then be **notified** when any matching events are published that match the
+You can subscribe to published *event types* by registering webhooks.
+You will then be notified when any matching events are published for the
 given sales unit ID.
 
 As an example, a merchant can register a callback URL to receive a callback when
-any of the payments of the merchant is captured.
+any of the merchant's payments are captured.
 
 There is a set limit on how many registrations per event types per sales unit
-allowed, see the API reference for the exact limit.
+are allowed. See the API reference for the exact limit.
