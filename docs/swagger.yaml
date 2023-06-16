@@ -55,7 +55,7 @@ paths:
           in: header
           description: |-
             The version number of the ecommerce plugin (if applicable).
-            See [HTTP headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers)."
+            See [HTTP headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers).
           style: simple
           schema:
             maxLength: 30
@@ -120,7 +120,7 @@ paths:
           in: header
           description: |-
             The version number of the ecommerce plugin (if applicable).
-            See [HTTP headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers)."
+            See [HTTP headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers).
           style: simple
           schema:
             maxLength: 30
@@ -198,7 +198,7 @@ paths:
           in: header
           description: |-
             The version number of the ecommerce plugin (if applicable).
-            See [HTTP headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers)."
+            See [HTTP headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers).
           style: simple
           schema:
             maxLength: 30
