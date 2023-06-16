@@ -298,6 +298,7 @@ components:
           type: array
           items:
             type: string
+          description: 'See [Webhooks API Events](https://developer.vippsmobilepay.com/docs/APIs/webhooks-api/events/) for details.'
           example:
             - service.payment.captured.v1
             - service.payment.created.v2
