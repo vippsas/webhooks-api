@@ -26,6 +26,6 @@ investigate the problem, contact you to find out what goes wrong, etc.
 
 ## Why do'nt I get any callbacks?
 
-We require TLS 1.2 for the HTTPS conection to the webhooks you have registered.
+We require TLS 1.2 for the HTTPS connection to the webhooks you have registered.
 If you do not support TLS 1.2, we will not be able to establish the connection,
 and we are unable to send the callback.
