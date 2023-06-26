@@ -10,7 +10,7 @@ END_METADATA -->
 
 # Frequently asked questions
 
-## How can I replacve a webhook?
+## How can I replace a webhook?
 
 To replace a webhook, you can register a new webhook for the same event type.
 
