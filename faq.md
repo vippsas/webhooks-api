@@ -24,7 +24,7 @@ Please do not let an obsolete webhook return an error (like `HTTP 404 Not Found`
 since that may be misclassified a real incident on our side, requiring us to
 investigate the problem, contact you to find out what goes wrong, etc.
 
-## Why do'nt I get any callbacks?
+## Why don't I get any callbacks?
 
 We require TLS 1.2 for the HTTPS connection to the webhooks you have registered.
 If you do not support TLS 1.2, we will not be able to establish the connection,
