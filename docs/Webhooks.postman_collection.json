@@ -1,0 +1,264 @@
+{
+	"info": {
+		"_postman_id": "56bfa3bd-23ba-4699-bc7c-36c27e156cb6",
+		"name": "Webhooks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Subscribe",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Should pass\", () => {\r",
+							"    pm.response.to.have.status(201)\r",
+							"\r",
+							"    const responseBody = pm.response.json()\r",
+							"    pm.environment.set(\"webhook_id\", responseBody.id)\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"tlsDisabledProtocols": []
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Merchant-Serial-Number",
+						"value": "{{merchantSerialNumber}}",
+						"type": "default"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "{{Ocp-Apim-Subscription-Key}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"url\": \"{{callbackUrl}}\",\r\n    \"events\": [\"epayments.payment.captured.v1\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/webhooks/v1/webhooks",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"webhooks",
+						"v1",
+						"webhooks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Should pass\", () => {\r",
+							"    pm.response.to.have.status(200)\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "merchant-serial-number",
+						"value": "{{merchantSerialNumber}}",
+						"type": "default"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "{{Ocp-Apim-Subscription-Key}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/webhooks/v1/webhooks",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"webhooks",
+						"v1",
+						"webhooks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Last Subscription",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Should pass\", () => {\r",
+							"    pm.response.to.have.status(204)\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "merchant-serial-number",
+						"value": "{{merchantSerialNumber}}",
+						"type": "default"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "{{Ocp-Apim-Subscription-Key}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/webhooks/v1/webhooks/{{webhook_id}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"webhooks",
+						"v1",
+						"webhooks",
+						"{{webhook_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete All Subscriptions",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Should pass\", () => {\r",
+							"    pm.response.to.have.status(200)\r",
+							"\r",
+							"    const webhookIds = pm.response.json().webhooks.map(x => x.id);\r",
+							"    \r",
+							"    for (let id of webhookIds)\r",
+							"    {\r",
+							"        console.log(`Deleting ${id}`);\r",
+							"        \r",
+							"        pm.sendRequest({\r",
+							"            url: `${pm.request.url}/${id}`,\r",
+							"            method: 'DELETE',\r",
+							"            header: {\r",
+							"                'merchant-serial-number': `${pm.environment.get(\"merchantSerialNumber\")}`,\r",
+							"                'Ocp-Apim-Subscription-Key': `${pm.environment.get(\"Ocp-Apim-Subscription-Key\")}`,\r",
+							"                'Authorization': `Bearer ${pm.environment.get(\"access_token\")}`\r",
+							"            }\r",
+							"        },\r",
+							"        (_, response) => pm.expect(response).to.have.status(204))\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "merchant-serial-number",
+						"value": "{{merchantSerialNumber}}",
+						"type": "default"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "{{Ocp-Apim-Subscription-Key}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/webhooks/v1/webhooks",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"webhooks",
+						"v1",
+						"webhooks"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

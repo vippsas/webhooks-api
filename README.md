@@ -24,6 +24,5 @@ As an example, a merchant can register a callback URL to receive a callback when
 any of the merchant's payments are captured.
 
 You can register a set number of webhooks per event type for each sales unit.
-See
-[Register webhook](https://developer.vippsmobilepay.com/api/webhooks/#tag/v1/paths/~1v1~1webhooks/post)
+See [Register webhook](https://developer.vippsmobilepay.com/api/webhooks/#tag/v1/paths/~1v1~1webhooks/post)
 for details.
