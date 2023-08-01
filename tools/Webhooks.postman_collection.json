@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "Subscribe",
+			"name": "Register",
 			"event": [
 				{
 					"listen": "test",
@@ -83,7 +83,7 @@
 			"response": []
 		},
 		{
-			"name": "Get",
+			"name": "Get All",
 			"event": [
 				{
 					"listen": "test",
@@ -136,7 +136,7 @@
 			"response": []
 		},
 		{
-			"name": "Delete Last Subscription",
+			"name": "Delete Last",
 			"event": [
 				{
 					"listen": "test",
@@ -190,7 +190,7 @@
 			"response": []
 		},
 		{
-			"name": "Delete All Subscriptions",
+			"name": "Delete All",
 			"event": [
 				{
 					"listen": "test",
