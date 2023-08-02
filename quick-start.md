@@ -173,6 +173,8 @@ curl https://apitest.vipps.no//webhooks/v1/webhooks \
     
 <TabItem value="postman">
 
+Variable `webhook_id` is automatically set when running request `Register`.
+
 ```bash
 Send request 'Delete Last'
 ```

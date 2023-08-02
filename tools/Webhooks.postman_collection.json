@@ -6,6 +6,81 @@
 	},
 	"item": [
 		{
+			"name": "Get Access Token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"access_token\", pm.response.json().access_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "client_id",
+						"value": "{{client_id}}"
+					},
+					{
+						"key": "client_secret",
+						"value": "{{client_secret}}"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "{{Ocp-Apim-Subscription-Key}}",
+						"type": "default"
+					},
+					{
+						"key": "Merchant-Serial-Number",
+						"value": "{{merchantSerialNumber}}",
+						"type": "default"
+					},
+					{
+						"key": "Vipps-System-Name",
+						"value": "{{vipps_system_name}}",
+						"type": "default"
+					},
+					{
+						"key": "Vipps-System-Version",
+						"value": "{{vipps_system_version}}",
+						"type": "default"
+					},
+					{
+						"key": "Vipps-System-Plugin-Name",
+						"value": "{{vipps_system_plugin_name}}",
+						"type": "default"
+					},
+					{
+						"key": "Vipps-System-Plugin-Version",
+						"value": "{{vipps_system_plugin_version}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://apitest.vipps.no/accessToken/get",
+					"protocol": "https",
+					"host": [
+						"apitest",
+						"vipps",
+						"no"
+					],
+					"path": [
+						"accessToken",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Register",
 			"event": [
 				{
@@ -49,13 +124,33 @@
 				"method": "POST",
 				"header": [
 					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "{{Ocp-Apim-Subscription-Key}}",
+						"type": "default"
+					},
+					{
 						"key": "Merchant-Serial-Number",
 						"value": "{{merchantSerialNumber}}",
 						"type": "default"
 					},
 					{
-						"key": "Ocp-Apim-Subscription-Key",
-						"value": "{{Ocp-Apim-Subscription-Key}}",
+						"key": "Vipps-System-Name",
+						"value": "{{vipps_system_name}}",
+						"type": "default"
+					},
+					{
+						"key": "Vipps-System-Version",
+						"value": "{{vipps_system_version}}",
+						"type": "default"
+					},
+					{
+						"key": "Vipps-System-Plugin-Name",
+						"value": "{{vipps_system_plugin_name}}",
+						"type": "default"
+					},
+					{
+						"key": "Vipps-System-Plugin-Version",
+						"value": "{{vipps_system_plugin_version}}",
 						"type": "default"
 					}
 				],
@@ -111,13 +206,33 @@
 				"method": "GET",
 				"header": [
 					{
-						"key": "merchant-serial-number",
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "{{Ocp-Apim-Subscription-Key}}",
+						"type": "default"
+					},
+					{
+						"key": "Merchant-Serial-Number",
 						"value": "{{merchantSerialNumber}}",
 						"type": "default"
 					},
 					{
-						"key": "Ocp-Apim-Subscription-Key",
-						"value": "{{Ocp-Apim-Subscription-Key}}",
+						"key": "Vipps-System-Name",
+						"value": "{{vipps_system_name}}",
+						"type": "default"
+					},
+					{
+						"key": "Vipps-System-Version",
+						"value": "{{vipps_system_version}}",
+						"type": "default"
+					},
+					{
+						"key": "Vipps-System-Plugin-Name",
+						"value": "{{vipps_system_plugin_name}}",
+						"type": "default"
+					},
+					{
+						"key": "Vipps-System-Plugin-Version",
+						"value": "{{vipps_system_plugin_version}}",
 						"type": "default"
 					}
 				],
@@ -164,13 +279,33 @@
 				"method": "DELETE",
 				"header": [
 					{
-						"key": "merchant-serial-number",
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "{{Ocp-Apim-Subscription-Key}}",
+						"type": "default"
+					},
+					{
+						"key": "Merchant-Serial-Number",
 						"value": "{{merchantSerialNumber}}",
 						"type": "default"
 					},
 					{
-						"key": "Ocp-Apim-Subscription-Key",
-						"value": "{{Ocp-Apim-Subscription-Key}}",
+						"key": "Vipps-System-Name",
+						"value": "{{vipps_system_name}}",
+						"type": "default"
+					},
+					{
+						"key": "Vipps-System-Version",
+						"value": "{{vipps_system_version}}",
+						"type": "default"
+					},
+					{
+						"key": "Vipps-System-Plugin-Name",
+						"value": "{{vipps_system_plugin_name}}",
+						"type": "default"
+					},
+					{
+						"key": "Vipps-System-Plugin-Version",
+						"value": "{{vipps_system_plugin_version}}",
 						"type": "default"
 					}
 				],
@@ -209,9 +344,13 @@
 							"            url: `${pm.request.url}/${id}`,\r",
 							"            method: 'DELETE',\r",
 							"            header: {\r",
-							"                'merchant-serial-number': `${pm.environment.get(\"merchantSerialNumber\")}`,\r",
+							"                'Merchant-Serial-Number': `${pm.environment.get(\"merchantSerialNumber\")}`,\r",
 							"                'Ocp-Apim-Subscription-Key': `${pm.environment.get(\"Ocp-Apim-Subscription-Key\")}`,\r",
 							"                'Authorization': `Bearer ${pm.environment.get(\"access_token\")}`\r",
+							"                'Vipps-System-Name': `Bearer ${pm.environment.get(\"vipps_system_name\")}`\r",
+							"                'Vipps-System-Version': `Bearer ${pm.environment.get(\"vipps_system_version\")}`\r",
+							"                'Vipps-System-Plugin-Name': `Bearer ${pm.environment.get(\"vipps_system_plugin_name\")}`\r",
+							"                'Vipps-System-Plugin-Version': `Bearer ${pm.environment.get(\"vipps_system_plugin_version\")}`\r",
 							"            }\r",
 							"        },\r",
 							"        (_, response) => pm.expect(response).to.have.status(204))\r",
@@ -236,13 +375,33 @@
 				"method": "GET",
 				"header": [
 					{
-						"key": "merchant-serial-number",
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "{{Ocp-Apim-Subscription-Key}}",
+						"type": "default"
+					},
+					{
+						"key": "Merchant-Serial-Number",
 						"value": "{{merchantSerialNumber}}",
 						"type": "default"
 					},
 					{
-						"key": "Ocp-Apim-Subscription-Key",
-						"value": "{{Ocp-Apim-Subscription-Key}}",
+						"key": "Vipps-System-Name",
+						"value": "{{vipps_system_name}}",
+						"type": "default"
+					},
+					{
+						"key": "Vipps-System-Version",
+						"value": "{{vipps_system_version}}",
+						"type": "default"
+					},
+					{
+						"key": "Vipps-System-Plugin-Name",
+						"value": "{{vipps_system_plugin_name}}",
+						"type": "default"
+					},
+					{
+						"key": "Vipps-System-Plugin-Version",
+						"value": "{{vipps_system_plugin_version}}",
 						"type": "default"
 					}
 				],
