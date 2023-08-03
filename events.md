@@ -2,7 +2,7 @@
 ---
 title: Webhooks API Events
 sidebar_label: Events
-sidebar_position: 2
+sidebar_position: 3
 pagination_next: null
 pagination_prev: null
 ---
