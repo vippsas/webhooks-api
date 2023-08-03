@@ -22,7 +22,7 @@ This document covers the quick steps for getting started with the webhooks API.
 You must have already signed up as an organization with Vipps MobilePay and have
 your test credentials from the merchant portal, as described in the [Getting
 Started
-Guide](https://developer.vippsmobilepay.com/docs/vipps-developers/getting-started).
+Guide](https://developer.vippsmobilepay.com/docs/getting-started/).
 
 For this quick start, you'll need the following.
 
@@ -46,7 +46,7 @@ Import the following files into Postman, remember to replace the placeholder val
 * [Webhooks API Postman collection](/tools/postman-collection.png)
 * [Global Postman environment](https://github.com/vippsas/vipps-developers/blob/master/tools/vipps-api-global-postman-environment.json).
 
-For help using Postman, see [Quick start guides](https://developer.vippsmobilepay.com/docs/vipps-developers/quick-start-guides).
+For help using Postman, see [Quick Start Guides](https://developer.vippsmobilepay.com/docs/quick-start-guides/).
 
 </TabItem>
 
