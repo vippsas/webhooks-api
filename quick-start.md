@@ -30,7 +30,7 @@ For this quick start, you'll need the following.
 * `client_secret` - Merchant key required for getting the access token.
 * `Ocp-Apim-Subscription-Key` - Merchant subscription key.
 * `merchantSerialNumber` - Merchant ID.
-* `callbackUrl` - Some HTTPS url that can receive a POST request callback.
+* `callbackUrl` - Some HTTPS URL that can receive a POST request callback.
 
 ## Step 1 - Setup
 
@@ -41,9 +41,9 @@ For this quick start, you'll need the following.
 
 <TabItem value="postman">
 
-Import the following files into Postman, remember to replace the placeholder values with your own credentials and callback url.
+Import the following files into Postman, remember to replace the placeholder values with your own credentials and callback URL.
 
-* [Webhooks API Postman collection](/tools/postman-collection.png)
+* [Webhooks API Postman collection](/tools/Webhooks.postman_collection.json)
 * [Global Postman environment](https://github.com/vippsas/vipps-developers/blob/master/tools/vipps-api-global-postman-environment.json).
 
 For help using Postman, see [Quick start guides](https://developer.vippsmobilepay.com/docs/vipps-developers/quick-start-guides).
@@ -98,8 +98,13 @@ curl https://apitest.vipps.no/accessToken/get \
 
 The property `access_token` should be used for all other API requests in the `Authorization` header as the Bearer token.
 
-## Step 3 - Register a webhook on the ePayments API capture event
+## Step 3 - Register a webhook on the ePayment API capture event
 
+<Tabs 
+    defaultValue="curl" 
+    groupId="sdk-choice" 
+    values={[ {label: 'curl', value: 'curl'}, {label: 'Postman', value: 'postman'}, ]}> 
+    
 <TabItem value="postman">
 
 ```bash
