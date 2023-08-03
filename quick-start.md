@@ -41,12 +41,15 @@ For this quick start, you'll need the following.
 
 <TabItem value="postman">
 
-Import the following files into Postman, remember to replace the placeholder values with your own credentials and callback URL.
+**Please note:** Postman is discontinuing their offline version. Use only your test keys and delete them after testing. Ensure that your company allows for cloud use before continuing.
+
+If you wish to use Postman, import the following files:
+
+Remember to replace the placeholder values with your own credentials and callback URL.
 
 * [Webhooks API Postman collection](/tools/Webhooks.postman_collection.json)
 * [Global Postman environment](https://github.com/vippsas/vipps-developers/blob/master/tools/vipps-api-global-postman-environment.json).
 
-For help using Postman, see [Quick Start Guides](https://developer.vippsmobilepay.com/docs/quick-start-guides/).
 
 </TabItem>
 
