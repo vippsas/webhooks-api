@@ -1,7 +1,7 @@
 ---
 title: Webhooks API Request authentication
 sidebar_label: Request authentication
-sidebar_position: 40
+sidebar_position: 50
 pagination_next: null
 pagination_prev: null
 ---
