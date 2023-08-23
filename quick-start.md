@@ -2,17 +2,17 @@
 title: Quick start
 sidebar_label: Quick start
 id: quick-start
-sidebar_position: 2
-description: Quick steps for getting started with the webhooks API.
+sidebar_position: 20
+description: Quick steps for getting started with the Webhooks API.
 toc_min_heading_level: 2
 toc_max_heading_level: 5
 pagination_next: null
 pagination_prev: null
 ---
 
-import ApiSchema from '@theme/ApiSchema';  
-import Tabs from '@theme/Tabs';  
-import TabItem from '@theme/TabItem';  
+import ApiSchema from '@theme/ApiSchema';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # Quick start
 

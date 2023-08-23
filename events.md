@@ -1,12 +1,10 @@
-<!-- START_METADATA
 ---
 title: Webhooks API Events
 sidebar_label: Events
-sidebar_position: 3
+sidebar_position: 30
 pagination_next: null
 pagination_prev: null
 ---
-END_METADATA -->
 
 # Events
 
