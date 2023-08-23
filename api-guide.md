@@ -1,7 +1,7 @@
 ---
 title: Webhooks API guide
 sidebar_label: API guide
-sidebar_position: 25
+sidebar_position: 30
 description: Find technical details about integrating with the Webhooks API.
 pagination_prev: Null
 pagination_next: Null
@@ -10,21 +10,21 @@ pagination_next: Null
 # API guide
 
 Webhooks alert you to your API request updates (e.g., payment *Authorized*, *Cancelled*, *Expired*, and
-[many others](https://developer.vippsmobilepay.com/docs/APIs/webhooks-api/events/)).
+[others](https://developer.vippsmobilepay.com/docs/APIs/webhooks-api/events/)).
 
-You can [register][register_webhook_endpoint]
-to receive webhooks for specific events (e.g., *Cancelled* payment requests)
+You can register to receive webhooks for specific events (e.g., *Cancelled* payment requests)
 and update your system instantly upon notification.
 
 **Note:**
-You can register a set number of webhooks per event type for each sales unit.
+You can register a set number of webhooks per event type for each sales unit, as described in the
+[API spec][register_webhook_endpoint].
 
-For example, to register to receive a message for each authorized payment, send the following HTTP POST request:
+As an example, to receive a message for each *Authorized* payment, send the following HTTP POST request:
 
 [`POST:/webhooks/v1/webhooks`](https://developer.vippsmobilepay.com/api/webhooks/#tag/v1/paths/~1v1~1webhooks/post)
 
-In the body of the request, specify the `"epayments.payment.authorized.v1"` in the `events` list.
-Also, specify the `url` as the web server where we should send webhook messages. For example:
+In the body, specify the `"epayments.payment.authorized.v1"`, as shown in the [Event table for ePayment](events.md#epayment).
+Also, specify the `url` of the web server where we should send the webhook notifications. For example:
 
 ```json
 {  
@@ -42,13 +42,10 @@ You will receive a response similar to this:
 }
 ```
 
-Use the `secret` to authenticate each webhook notifications with HMAC, as described in
+Use the `secret` to authenticate the webhook notifications with HMAC, as described in
 [Request authentication](request-authentication.md).
-
 Once a notification is authenticated, you will be able to get its payload.
-
-Each API determines the format of their payloads.
-The [payload from an ePayment webhook][epayment_events_url] is like this:
+For example:
 
 ```json
 {
@@ -67,8 +64,10 @@ The [payload from an ePayment webhook][epayment_events_url] is like this:
 }
 ```
 
-See [Events](events.md) for a list of all the events that you can subscribe to.
+Each API determines the format of their payloads.
+The payload from an ePayment webhook is shown on the [ePayment API: Webhooks page][epayment_events_url].
 
+See [Events](events.md) for a list of all subscribable events.
 
 ## Retries
 
@@ -82,7 +81,6 @@ failed request(s) for the same webhook before the next event notifications
 can be sent.
 Any response with HTTP status code in range 4-5xx will result in a retry.
 Delay between retries will be progressively slower to not overwhelm receivers.
-
 
 
 
