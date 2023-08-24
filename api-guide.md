@@ -12,9 +12,6 @@ pagination_next: null
 You can use the Webhooks API to get an HTTP notification
 whenever a subscribed event happens, for example an captured payment on the ePayment platform.
 
-You can register to receive webhooks for specific events (e.g., *Cancelled* payment requests)
-and update your system instantly upon notification.
-
 **Note:**
 You can register a set number of webhooks per event type for each sales unit, as described in the
 [API spec][register_webhook_endpoint].
