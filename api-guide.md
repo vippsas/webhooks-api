@@ -73,10 +73,10 @@ After all retries are exhausted, the notification is never sent again.
 This applies to both new and previously created webhooks.
 
 The delivery order of failed webhook notifications is guaranteed in order.
-That means your server needs to accept all preceding requests for a given payment, before subsequent notifications can be received.
+That means your server needs to accept all preceding requests for a given payment, before any new notifications can be received for the same payment.
 For example, if you reply with an HTTP status code 500 to an authorization notification,
-a later notification about the same payment being captured will not be sent
-unless you reply with a successful HTTP status code to one of the subsequent retry attempts.
+a new notification about the same payment being captured will not be sent
+unless you reply with a successful HTTP status code to one of the retry attempts.
 
 Any response with HTTP status code in range 4-5xx will result in a retry.
 Delay between retries will be progressively slower to not overwhelm receivers.
