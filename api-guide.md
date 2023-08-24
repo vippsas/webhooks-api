@@ -72,7 +72,7 @@ Failed webhook notifications are retried with an exponential backoff for up to 7
 After all retries are exhausted, the notification is never sent again.
 This applies to both new and previously created webhooks.
 
-The delivery order of failed webhook notifications is guaranteed in order.
+The delivery order of failed webhook notifications is guaranteed in order per registered webhook.
 That means your server needs to accept all preceding requests for a given payment, before any new notifications can be received for the same payment.
 For example, if you reply with an HTTP status code 500 to an authorization notification,
 a new notification about the same payment being captured will not be sent
@@ -80,8 +80,6 @@ unless you reply with a successful HTTP status code to one of the retry attempts
 
 Any response with HTTP status code in range 4-5xx will result in a retry.
 Delay between retries will be progressively slower to not overwhelm receivers.
-
-
 
 [register_webhook_endpoint]: https://developer.vippsmobilepay.com/api/webhooks/#tag/v1/paths/~1v1~1webhooks/post
 [epayment_events_url]: https://developer.vippsmobilepay.com/docs/APIs/epayment-api/features/webhooks/
