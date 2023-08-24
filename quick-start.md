@@ -18,11 +18,10 @@ import TabItem from '@theme/TabItem';
 
 ## Before you begin
 
-This document covers the quick steps for getting started with the webhooks API.
+This document covers the quick steps for getting started with the Webhooks API.
 You must have already signed up as an organization with Vipps MobilePay and have
-your test credentials from the merchant portal, as described in the [Getting
-Started
-Guide](https://developer.vippsmobilepay.com/docs/getting-started/).
+your test credentials from the [Merchant Portal](https://portal.vipps.no), as described in the
+[Getting started guide](https://developer.vippsmobilepay.com/docs/getting-started/).
 
 For this quick start, you'll need the following.
 
@@ -43,7 +42,7 @@ For this quick start, you'll need the following.
 
 **Please note:** Postman is discontinuing their offline version. Use only your test keys and delete them after testing. Ensure that your company allows for cloud use before continuing.
 
-If you wish to use Postman, import the following files:
+To use Postman, import the following files:
 
 Remember to replace the placeholder values with your own credentials and callback URL.
 
@@ -62,10 +61,10 @@ No setup needed.
 
 ## Step 2 - Authentication
 
-For the following, you will need an `access_token` from the [Access token
-API](https://developer.vippsmobilepay.com/docs/APIs/access-token-api):
-[`POST:/accesstoken/get`][access-token-endpoint]. This provides you with access
-to the API.
+For the following steps, you will need an `access_token` from the
+[Access token API](https://developer.vippsmobilepay.com/docs/APIs/access-token-api):
+[`POST:/accesstoken/get`](https://developer.vippsmobilepay.com/api/access-token#tag/Authorization-Service/operation/fetchAuthorizationTokenUsingPost).
+This provides you with access to the API.
 
 <Tabs 
     defaultValue="curl" 
