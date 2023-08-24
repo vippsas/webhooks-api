@@ -9,8 +9,8 @@ pagination_next: null
 
 # API guide
 
-Webhooks alert you to your API request updates (e.g., payment *Authorized*, *Cancelled*, *Expired*, and
-[others](https://developer.vippsmobilepay.com/docs/APIs/webhooks-api/events/)).
+You can use the Webhooks API to get an HTTP notification
+whenever a subscribed event happens, for example an captured payment on the ePayment platform.
 
 You can register to receive webhooks for specific events (e.g., *Cancelled* payment requests)
 and update your system instantly upon notification.
