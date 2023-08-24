@@ -3,8 +3,8 @@ title: Webhooks API guide
 sidebar_label: API guide
 sidebar_position: 30
 description: Find technical details about integrating with the Webhooks API.
-pagination_prev: Null
-pagination_next: Null
+pagination_prev: null
+pagination_next: null
 ---
 
 # API guide
