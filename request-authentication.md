@@ -1,12 +1,10 @@
-<!-- START_METADATA
 ---
-title: Webhooks API Request Authentication
-sidebar_label: Request Authentication
-sidebar_position: 4
+title: Webhooks API Request authentication
+sidebar_label: Request authentication
+sidebar_position: 50
 pagination_next: null
 pagination_prev: null
 ---
-END_METADATA -->
 
 # Request authentication
 

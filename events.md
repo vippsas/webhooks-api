@@ -1,32 +1,30 @@
-<!-- START_METADATA
 ---
 title: Webhooks API Events
 sidebar_label: Events
-sidebar_position: 3
+sidebar_position: 60
 pagination_next: null
 pagination_prev: null
 ---
-END_METADATA -->
 
 # Events
 
 Webhooks will send out events for the
-[ePayment API](https://developer.vippsmobilepay.com/docs/APIs/epayment-api/features/webhooks),
-but in the future, it may also send to other Vipps MobilePay payment APIs.
+[ePayment API](https://developer.vippsmobilepay.com/docs/APIs/epayment-api/features/webhooks).
+In the future, it may also send to other Vipps MobilePay APIs.
 
 The event types to which you can subscribe are shown below.
 
 ## ePayment
 
-| Name       | Event Type                      | Reference|
-| ---------- | ------------------------------- | ---------|
-| Created    | epayments.payment.created.v1    | [payload](https://developer.vippsmobilepay.com/docs/APIs/epayment-api/features/webhooks) |
-| Aborted    | epayments.payment.aborted.v1    | [payload](https://developer.vippsmobilepay.com/docs/APIs/epayment-api/features/webhooks) |
-| Expired    | epayments.payment.expired.v1    | [payload](https://developer.vippsmobilepay.com/docs/APIs/epayment-api/features/webhooks) |
-| Cancelled  | epayments.payment.cancelled.v1  | [payload](https://developer.vippsmobilepay.com/docs/APIs/epayment-api/features/webhooks) |
-| Captured   | epayments.payment.captured.v1   | [payload](https://developer.vippsmobilepay.com/docs/APIs/epayment-api/features/webhooks) |
-| Refunded   | epayments.payment.refunded.v1   | [payload](https://developer.vippsmobilepay.com/docs/APIs/epayment-api/features/webhooks) |
-| Authorized | epayments.payment.authorized.v1 | [payload](https://developer.vippsmobilepay.com/docs/APIs/epayment-api/features/webhooks) |
-| Terminated | epayments.payment.terminated.v1 | [payload](https://developer.vippsmobilepay.com/docs/APIs/epayment-api/features/webhooks) |
+| Name       | Event Type                      |
+| ---------- | ------------------------------- |
+| Created    | epayments.payment.created.v1    |
+| Aborted    | epayments.payment.aborted.v1    |
+| Expired    | epayments.payment.expired.v1    |
+| Cancelled  | epayments.payment.cancelled.v1  |
+| Captured   | epayments.payment.captured.v1   |
+| Refunded   | epayments.payment.refunded.v1   |
+| Authorized | epayments.payment.authorized.v1 |
+| Terminated | epayments.payment.terminated.v1 |
 
-See the [payload specification](https://developer.vippsmobilepay.com/docs/APIs/epayment-api/features/webhooks) for more information.
+See [ePayment Webhooks](https://developer.vippsmobilepay.com/docs/APIs/epayment-api/features/webhooks) for the payload format.

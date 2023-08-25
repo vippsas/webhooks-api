@@ -1,4 +1,3 @@
-<!-- START_METADATA
 ---
 title: Introduction to the Webhooks API
 sidebar_label: Introduction
@@ -7,7 +6,6 @@ hide_table_of_contents: true
 pagination_next: null
 pagination_prev: null
 ---
-END_METADATA -->
 
 # Webhooks API
 
@@ -20,9 +18,20 @@ You can subscribe to published *event types* by registering webhooks.
 You will then be notified when any matching events are published for the
 given sales unit's Merchant Serial Number.
 
-As an example, a merchant can register a callback URL to receive a callback when
-any of the merchant's payments are captured.
+The Webhooks API supports:
 
-You can register a set number of webhooks per event type for each sales unit.
-See [Register webhook](https://developer.vippsmobilepay.com/api/webhooks/#tag/v1/paths/~1v1~1webhooks/post)
-for details.
+* [ePayment API](https://developer.vippsmobilepay.com/docs/APIs/epayment-api/)
+* [QR API: Merchant Callback QR codes](https://developer.vippsmobilepay.com/docs/APIs/qr-api/vipps-qr-api/#merchant-callback-qr-codes) (*coming soon*) 
+
+## Next steps
+
+* [API quick start](quick-start.md): Run the basic examples in curl or Postman.
+* [API guide](api-guide.md): Learn about the Webhooks API.
+* [Events](events.md): See the events you can register for.
+* [Request Authentication](request-authentication.md) - Learn how to authenticate the webhooks.
+* [API FAQ](faq.md): Look for your question among those people have asked before.
+* [API spec](https://developer.vippsmobilepay.com/api/webhooks/): Go to the endpoint specifications.
+
+If you're new to the platform, see
+[Getting started](https://developer.vippsmobilepay.com/docs/getting-started/)
+for information about API keys, product activation, and the test environment.
