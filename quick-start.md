@@ -118,7 +118,7 @@ Send request 'Register'
 <TabItem value="curl">
 
 ```bash
-curl https://apitest.vipps.no//webhooks/v1/webhooks \
+curl https://apitest.vipps.no/webhooks/v1/webhooks \
 -H "client_id: YOUR-CLIENT-ID" \
 -H "client_secret: YOUR-CLIENT-SECRET" \
 -H "Ocp-Apim-Subscription-Key: YOUR-SUBSCRIPTION-KEY" \
@@ -155,7 +155,7 @@ Send request 'Get All'
 <TabItem value="curl">
 
 ```bash
-curl https://apitest.vipps.no//webhooks/v1/webhooks \
+curl https://apitest.vipps.no/webhooks/v1/webhooks \
 -H "client_id: YOUR-CLIENT-ID" \
 -H "client_secret: YOUR-CLIENT-SECRET" \
 -H "Ocp-Apim-Subscription-Key: YOUR-SUBSCRIPTION-KEY" \
@@ -191,7 +191,7 @@ Send request 'Delete Last'
 <TabItem value="curl">
 
 ```bash
-curl https://apitest.vipps.no//webhooks/v1/webhooks/<WEBHOOK-ID> \
+curl https://apitest.vipps.no/webhooks/v1/webhooks/<WEBHOOK-ID> \
 -H "client_id: YOUR-CLIENT-ID" \
 -H "client_secret: YOUR-CLIENT-SECRET" \
 -H "Ocp-Apim-Subscription-Key: YOUR-SUBSCRIPTION-KEY" \
