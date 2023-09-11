@@ -119,8 +119,7 @@ Send request 'Register'
 
 ```bash
 curl https://apitest.vipps.no/webhooks/v1/webhooks \
--H "client_id: YOUR-CLIENT-ID" \
--H "client_secret: YOUR-CLIENT-SECRET" \
+-H "Authorization: Bearer YOUR-ACCESS-TOKEN" \
 -H "Ocp-Apim-Subscription-Key: YOUR-SUBSCRIPTION-KEY" \
 -H "Merchant-Serial-Number: 123456" \
 -H "Vipps-System-Name: acme" \
@@ -156,8 +155,7 @@ Send request 'Get All'
 
 ```bash
 curl https://apitest.vipps.no/webhooks/v1/webhooks \
--H "client_id: YOUR-CLIENT-ID" \
--H "client_secret: YOUR-CLIENT-SECRET" \
+-H "Authorization: Bearer YOUR-ACCESS-TOKEN" \
 -H "Ocp-Apim-Subscription-Key: YOUR-SUBSCRIPTION-KEY" \
 -H "Merchant-Serial-Number: 123456" \
 -H "Vipps-System-Name: acme" \
@@ -192,8 +190,7 @@ Send request 'Delete Last'
 
 ```bash
 curl https://apitest.vipps.no/webhooks/v1/webhooks/<WEBHOOK-ID> \
--H "client_id: YOUR-CLIENT-ID" \
--H "client_secret: YOUR-CLIENT-SECRET" \
+-H "Authorization: Bearer YOUR-ACCESS-TOKEN" \
 -H "Ocp-Apim-Subscription-Key: YOUR-SUBSCRIPTION-KEY" \
 -H "Merchant-Serial-Number: 123456" \
 -H "Vipps-System-Name: acme" \
