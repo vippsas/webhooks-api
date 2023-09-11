@@ -6,6 +6,9 @@ pagination_next: null
 pagination_prev: null
 ---
 
+import ApiSchema from '@theme/ApiSchema';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # Request authentication
 
@@ -16,9 +19,8 @@ webhook secret.
 
 <Tabs
     defaultValue="js" 
-    groupId="programmingLanguageChoice" 
-    values={[ {label: 'JavaScript', value: 'js'}, {label: '.Net C#', value: 'dotnetcsharp'}, ]}> 
->
+    groupId="example-choice" 
+    values={[ {label: 'JavaScript', value: 'js'}, {label: '.Net C#', value: 'csharp'}, ]}>
 
 <TabItem value="js">
 
@@ -79,7 +81,8 @@ console.log('Success! Business logic awaits!')
 ```
 </TabItem>
 
-<TabItem value="dotnetcsharp">
+<TabItem value="csharp">
+
 ## Summary pseudocode
 
 ```cmd
