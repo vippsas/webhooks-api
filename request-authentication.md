@@ -6,6 +6,7 @@ pagination_next: null
 pagination_prev: null
 ---
 
+
 # Request authentication
 
 A notification request from webhooks can be verified by using the `host`, `x-ms-date`, `x-ms-content-sha256`, and `authorization` headers with the
@@ -13,6 +14,72 @@ unique secret received when the webhook was registered. The authorization is a
 sha256 HMAC hash of the request date, content, and URI that is created using the
 webhook secret.
 
+<Tabs
+    defaultValue="js" 
+    groupId="programmingLanguageChoice" 
+    values={[ {label: 'JavaScript', value: 'js'}, {label: '.Net C#', value: 'dotnetcsharp'}, ]}> 
+>
+
+<TabItem value="js">
+
+To run: `node webhook.mjs`
+```js
+import crypto from "crypto";
+
+// The secret is found in the response when you register a webhook
+const secret = 'A0+AeKBRG2KRGvnNwJpQlb6IJFk48CKXCIcrLoHncVJKDILsQSxS6NWCccwWm6r6FhGKhiHTBsG2wo/xU6FY/A=='
+
+// The complete url of the webhook, including query parameters if applicable. I.e. https://yoursite.com/webhooks/vmp/v1
+const requestUrl = "https://webhook.site/e2cee29b-012e-4f1d-8ef4-e95fd74a7a63"
+// Part of the request header, found in the field 'x-ms-date'
+const dateTime = "Thu, 30 Mar 2023 08:38:32 GMT"
+
+// The signature/authorization sent by Vipps MobilePay for you to verify against. 
+// Part of the request header, found in the field 'authorization'
+const actualSignature = "HMAC-SHA256 SignedHeaders=x-ms-date;host;x-ms-content-sha256&Signature=agAiSyogQbDHpeucoNwYz+yAr5nJ+v+zasdkSbqzv+U="
+
+// HTTP Body
+const payloadJson = {
+  "some-unique-content":"ee6e441b-cc4a-46f8-895d-a5af79bcc233/hello-world"
+}
+
+const hashedPayload =  crypto.createHash("sha256").update(JSON.stringify(payloadJson)).digest("base64")
+// returns 'lNlsp1XA03N34HrQsVzPgJKtC+r7l/RBF4V3JQUWMj4='
+
+// The complete url of the call to the webhook, including query parameters if applicable
+const url = new URL(requestUrl)
+const pathAndQuery = url.pathname + url.search; 
+// returns '/e2cee29b-012e-4f1d-8ef4-e95fd74a7a63'
+const host = url.host 
+// returns 'webhook.site'
+
+// Example is using HTTP POST, hence starting with 'POST\n'
+const expectedSignedString = `POST\n${pathAndQuery}\n${dateTime};${host};${hashedPayload}`
+/* returns:
+POST
+/e2cee29b-012e-4f1d-8ef4-e95fd74a7a63
+Thu, 30 Mar 2023 08:38:32 GMT;webhook.site;lNlsp1XA03N34HrQsVzPgJKtC+r7l/RBF4V3JQUWMj4=
+*/
+
+const expectedSignature = crypto.createHmac("sha256", secret)
+  .update(expectedSignedString)
+  .digest("base64")
+// returns 'agAiSyogQbDHpeucoNwYz+yAr5nJ+v+zasdkSbqzv+U=' 
+// which matches the expected signature
+
+const expectedAuth = `HMAC-SHA256 SignedHeaders=x-ms-date;host;x-ms-content-sha256&Signature=${expectedSignature}`
+
+if(expectedAuth !== actualSignature) {
+  // Log the error.
+  // Fail, stop processing
+  throw new Error('Authorization fields do not match expected value!');
+}
+// Continue with business logic related to the webhook.
+console.log('Success! Business logic awaits!')
+```
+</TabItem>
+
+<TabItem value="dotnetcsharp">
 ## Summary pseudocode
 
 ```cmd
@@ -75,3 +142,5 @@ public class Examples
     }
 }
 ```
+</TabItem>
+</Tabs>
