@@ -24,12 +24,11 @@ webhook secret.
 
 <TabItem value="js">
 
-To run: `node webhook.mjs`
 ```js
 import crypto from "crypto";
 
-// The secret is found in the response body when you register a webhook. 
-// Note: The secret is unique per hook registration (EventType+YourURL).
+// The secret is found in the response body when you register a webhook.
+// Note: The secret is unique per hook registration, which may cover multiple event types.
 const secret = 'A0+AeKBRG2KRGvnNwJpQlb6IJFk48CKXCIcrLoHncVJKDILsQSxS6NWCccwWm6r6FhGKhiHTBsG2wo/xU6FY/A=='
 
 // The complete url of the webhook, including query parameters if applicable. I.e. https://yoursite.com/webhooks/vmp/v1
