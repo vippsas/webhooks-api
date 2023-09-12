@@ -47,9 +47,8 @@ const httpBody = {
 const hashedPayload =  crypto
   .createHash("sha256")
   .update(JSON.stringify(httpBody))
-  .digest("base64") // evauluates to 'lNlsp1XA03N34HrQsVzPgJKtC+r7l/RBF4V3JQUWMj4='
+  .digest("base64") // evaluates to 'lNlsp1XA03N34HrQsVzPgJKtC+r7l/RBF4V3JQUWMj4='
 
-// The complete url of the call to the webhook, including query parameters if applicable
 const url = new URL(requestUrl)
 const pathAndQuery = url.pathname + url.search; // '/e2cee29b-012e-4f1d-8ef4-e95fd74a7a63'
 const host = url.host // 'webhook.site'
