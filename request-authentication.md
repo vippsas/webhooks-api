@@ -31,7 +31,6 @@ import crypto from "crypto";
 // Note: The secret is unique per hook registration, which may cover multiple event types.
 const secret = 'A0+AeKBRG2KRGvnNwJpQlb6IJFk48CKXCIcrLoHncVJKDILsQSxS6NWCccwWm6r6FhGKhiHTBsG2wo/xU6FY/A=='
 
-// The complete url of the webhook, including query parameters if applicable. I.e. https://yoursite.com/webhooks/vmp/v1
 const requestUrl = "https://webhook.site/e2cee29b-012e-4f1d-8ef4-e95fd74a7a63"
 // Part of the HTTP request header from Vipps MobilePay, found in the field 'x-ms-date'
 const dateTime = "Thu, 30 Mar 2023 08:38:32 GMT"
