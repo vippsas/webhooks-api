@@ -43,9 +43,9 @@ For this quick start, you'll need the following.
 **Please note:** To prevent your sensitive data and credentials from being synced to the Postman cloud,
 store them in the *Current Value* fields of your Postman environment.
 
-Import the following files:
+In Postman, import the following files:
 
-Remember to replace the placeholder values with your own credentials and callback URL.
+Update the *Current Value* field in your Postman environment with your own credentials and callback URL.
 
 * [Webhooks API Postman collection](/tools/Webhooks.postman_collection.json)
 * [Global Postman environment](https://github.com/vippsas/vipps-developers/blob/master/tools/vipps-api-global-postman-environment.json).
