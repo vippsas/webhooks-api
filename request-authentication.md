@@ -44,30 +44,28 @@ const httpBody = {
   "some-unique-content":"ee6e441b-cc4a-46f8-895d-a5af79bcc233/hello-world"
 }
 
-const hashedPayload =  crypto.createHash("sha256").update(JSON.stringify(httpBody)).digest("base64")
-// returns 'lNlsp1XA03N34HrQsVzPgJKtC+r7l/RBF4V3JQUWMj4='
+const hashedPayload =  crypto
+  .createHash("sha256")
+  .update(JSON.stringify(httpBody))
+  .digest("base64") // evauluates to 'lNlsp1XA03N34HrQsVzPgJKtC+r7l/RBF4V3JQUWMj4='
 
 // The complete url of the call to the webhook, including query parameters if applicable
 const url = new URL(requestUrl)
-const pathAndQuery = url.pathname + url.search; 
-// returns '/e2cee29b-012e-4f1d-8ef4-e95fd74a7a63'
-const host = url.host 
-// returns 'webhook.site'
+const pathAndQuery = url.pathname + url.search; // '/e2cee29b-012e-4f1d-8ef4-e95fd74a7a63'
+const host = url.host // 'webhook.site'
 
-// Example is using HTTP POST, hence starting with 'POST\n'
 const expectedSignedString = `POST\n${pathAndQuery}\n${dateTime};${host};${hashedPayload}`
-/* returns:
+/* evaluates to:
 POST
 /e2cee29b-012e-4f1d-8ef4-e95fd74a7a63
 Thu, 30 Mar 2023 08:38:32 GMT;webhook.site;lNlsp1XA03N34HrQsVzPgJKtC+r7l/RBF4V3JQUWMj4=
 */
 
-// Run the HMAC algorithm on the expectedSignedString with the secret for the hook
+// Run the HMAC SHA256 algorithm on the expectedSignedString with the secret for the hook
 const expectedSignature = crypto.createHmac("sha256", secret)
   .update(expectedSignedString)
   .digest("base64")
-// returns 'agAiSyogQbDHpeucoNwYz+yAr5nJ+v+zasdkSbqzv+U=' 
-// which matches the expected signature
+// evaluates to: 'agAiSyogQbDHpeucoNwYz+yAr5nJ+v+zasdkSbqzv+U='
 
 const expectedAuth = `HMAC-SHA256 SignedHeaders=x-ms-date;host;x-ms-content-sha256&Signature=${expectedSignature}`
 
@@ -76,7 +74,6 @@ if(expectedAuth !== actualSignature) {
   // Fail, stop processing
   throw new Error('Authorization fields do not match expected value!');
 }
-// Continue with business logic related to the webhook.
 console.log('Success! Business logic awaits!')
 ```
 </TabItem>
