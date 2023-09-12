@@ -40,9 +40,10 @@ For this quick start, you'll need the following.
 
 <TabItem value="postman">
 
-**Please note:** Postman is discontinuing their offline version. Use only your test keys and delete them after testing. Ensure that your company allows for cloud use before continuing.
+**Please note:** To prevent your sensitive data and credentials from being synced to the Postman cloud,
+store them in the *Current Value* fields of your Postman environment.
 
-To use Postman, import the following files:
+Import the following files:
 
 Remember to replace the placeholder values with your own credentials and callback URL.
 
