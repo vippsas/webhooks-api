@@ -86,5 +86,5 @@ Delay between retries will be progressively slower to not overwhelm receivers.
 
 ## Partner Webhooks
 
-As a partner you can access endpoints with your usual key, client id and secret, without MSN.
+As a partner, you can access endpoints with your usual key, client id, and secret, without MSN.
 Any webhooks registered by a partner will trigger for the subscribed events from ANY merchant registered the given partner.

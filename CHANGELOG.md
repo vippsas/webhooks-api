@@ -18,5 +18,5 @@ To learn about API versioning, see
 
 ## September 2023
 
-* Partner authentication is now supported see [FAQ](https://developer.vippsmobilepay.com/docs/APIs/webhooks-api/faq/).
+* Partner authentication is now supported see [FAQ](https://developer.vippsmobilepay.com/docs/APIs/webhooks-api/api-guide#partner-webhooks).
 

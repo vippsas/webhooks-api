@@ -25,10 +25,10 @@ your test credentials from the [Merchant Portal](https://portal.vipps.no), as de
 
 For this quick start, you'll need the following.
 
-* `client_id` - Merchant or Partner key required for getting the access token.
-* `client_secret` - Merchant or Partner key required for getting the access token.
-* `Ocp-Apim-Subscription-Key` - Merchant or Partner subscription key.
-* `merchantSerialNumber` - Merchant ID if you're a Merchant.
+* `client_id` - Merchant or partner key required for getting the access token.
+* `client_secret` - Merchant or partner key required for getting the access token.
+* `Ocp-Apim-Subscription-Key` - Merchant or partner subscription key.
+* `merchantSerialNumber` - Merchant ID, if you're a merchant.
 * `callbackUrl` - Some HTTPS URL that can receive a POST request callback.
 
 ## Step 1 - Setup
