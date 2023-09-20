@@ -28,11 +28,3 @@ The event types to which you can subscribe are shown below.
 | Terminated | epayments.payment.terminated.v1 |
 
 See [ePayment Webhooks](https://developer.vippsmobilepay.com/docs/APIs/epayment-api/features/webhooks) for the payload format.
-
-## Qr
-
-| Name       | Event Type                      |
-| ---------- | ------------------------------- |
-| Scanned    | user.checkin.v1                 |
-
-See [Qr Api](https://developer.vippsmobilepay.com/docs/APIs/qr-api/vipps-qr-api/#merchant-callback-qr-codes) for the payload format.
