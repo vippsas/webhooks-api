@@ -43,3 +43,11 @@ See [ePayment Webhooks](https://developer.vippsmobilepay.com/docs/APIs/epayment-
 | Charge cancelled       | recurring.charge-canceled.v1         |
 | Charge failed          | recurring.charge-failed.v1           |
 | Charge creation failed | recurring.charge-creation-failed.v1  |
+
+## Qr
+
+| Name       | Event Type                      |
+| ---------- | ------------------------------- |
+| Scanned    | user.checkin.v1                 |
+
+See [QR Api](https://developer.vippsmobilepay.com/docs/APIs/qr-api/vipps-qr-api/#merchant-callback-qr-codes) for the payload format.
