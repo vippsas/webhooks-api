@@ -20,3 +20,8 @@ To learn about API versioning, see
 
 * Partner authentication is now supported, see [Partner webhooks](https://developer.vippsmobilepay.com/docs/APIs/webhooks-api/api-guide#partner-webhooks).
 
+## October 2023
+
+* Syncrhonous webhooks are now supported.
+* EventType for Qr callback supported.
+
