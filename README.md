@@ -9,7 +9,7 @@ pagination_prev: null
 
 # Webhooks API
 
-![Vipps](./images/vipps.png) *All the features are available for Vipps now.*
+![Vipps](./images/vipps.png) *Available for Vipps. New event types may be provided in the future.*
 
 ![MobilePay](./images/mp.png) *Available for MobilePay in selected markets at the [Vipps MobilePay joint platform launch](https://www.vippsmobilepay.com/#about).*
 
