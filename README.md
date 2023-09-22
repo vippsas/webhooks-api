@@ -9,6 +9,10 @@ pagination_prev: null
 
 # Webhooks API
 
+![Vipps](./images/vipps.png) *Available for Vipps. New event types may be provided in the future.*
+
+![MobilePay](./images/mp.png) *Available for MobilePay in selected markets at the [Vipps MobilePay joint platform launch](https://www.vippsmobilepay.com/#about).*
+
 The API works this way:
 
 * You register a webhook URL
@@ -21,7 +25,7 @@ given sales unit's Merchant Serial Number.
 The Webhooks API supports:
 
 * [ePayment API](https://developer.vippsmobilepay.com/docs/APIs/epayment-api/)
-* [QR API: Merchant Callback QR codes](https://developer.vippsmobilepay.com/docs/APIs/qr-api/vipps-qr-api/#merchant-callback-qr-codes) (*coming soon*) 
+* [QR API: Merchant Callback QR codes](https://developer.vippsmobilepay.com/docs/APIs/qr-api/vipps-qr-api/#merchant-callback-qr-codes) (*coming soon*)
 
 ## Next steps
 

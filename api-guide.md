@@ -9,8 +9,12 @@ pagination_next: null
 
 # API guide
 
+![Vipps](./images/vipps.png) *Available for Vipps. New event types may be provided in the future.*
+
+![MobilePay](./images/mp.png) *Available for MobilePay in selected markets at the [Vipps MobilePay joint platform launch](https://www.vippsmobilepay.com/#about).*
+
 You can use the Webhooks API to get an HTTP notification
-whenever a subscribed event happens, for example an captured payment on the ePayment platform.
+whenever a subscribed event happens, for example a captured payment on the ePayment platform.
 
 **Note:**
 You can register a set number of webhooks per event type for each sales unit, as described in the
@@ -86,5 +90,5 @@ Delay between retries will be progressively slower to not overwhelm receivers.
 
 ## Partner Webhooks
 
-As a partner, you can access endpoints with your usual key, client id, and secret, without MSN.
+As a partner, you can access endpoints with your usual key, client ID, and secret, without MSN.
 Any webhooks registered by a partner will trigger for the subscribed events from ANY merchant registered the given partner.
