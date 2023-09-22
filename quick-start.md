@@ -18,25 +18,27 @@ import TabItem from '@theme/TabItem';
 
 ## Before you begin
 
-This document covers the quick steps for getting started with the Webhooks API.
-You must have already signed up as an organization with Vipps MobilePay and have
-your test credentials from the [Merchant Portal](https://portal.vipps.no), as described in the
-[Getting started guide](https://developer.vippsmobilepay.com/docs/getting-started/).
-
-For this quick start, you'll need the following.
-
-* `client_id` - Merchant or partner key required for getting the access token.
-* `client_secret` - Merchant or partner key required for getting the access token.
-* `Ocp-Apim-Subscription-Key` - Merchant or partner subscription key.
-* `merchantSerialNumber` - Merchant ID, if you're a merchant.
-* `callbackUrl` - Some HTTPS URL that can receive a POST request callback.
+The examples use standard example values that you must change to
+use *your* values. This includes API keys, HTTP headers, reference, etc.
 
 ## Step 1 - Setup
+
+You must have already signed up as an organization with Vipps MobilePay and have
+your test credentials from the merchant portal.
+
+You will need the following values, as described in the
+[Getting started guide](https://developer.vippsmobilepay.com/docs/getting-started):
+
+* `client_id` - Client_id for a test sales unit.
+* `client_secret` - Client_id for a test sales unit.
+* `Ocp-Apim-Subscription-Key` - Subscription key for a test sales unit.
+* `merchantSerialNumber` - The unique ID for a test sales unit.
+* `callbackUrl` - An HTTPS URL that can receive a POST request callback.
 
 <Tabs 
     defaultValue="curl" 
     groupId="sdk-choice" 
-    values={[ {label: 'curl', value: 'curl'}, {label: 'Postman', value: 'postman'}, ]}> 
+    values={[ {label: 'curl', value: 'curl'}, {label: 'Postman', value: 'postman'}, ]}>
 
 <TabItem value="postman">
 
@@ -49,7 +51,6 @@ Update the *Current Value* field in your Postman environment with your own crede
 
 * [Webhooks API Postman collection](/tools/Webhooks.postman_collection.json)
 * [Global Postman environment](https://github.com/vippsas/vipps-developers/blob/master/tools/vipps-api-global-postman-environment.json).
-
 
 </TabItem>
 
@@ -87,7 +88,7 @@ curl https://apitest.vipps.no/accessToken/get \
 -H "client_id: YOUR-CLIENT-ID" \
 -H "client_secret: YOUR-CLIENT-SECRET" \
 -H "Ocp-Apim-Subscription-Key: YOUR-SUBSCRIPTION-KEY" \
--H "Merchant-Serial-Number: 123456" \
+-H "Merchant-Serial-Number: YOUR-MSN" \
 -H "Vipps-System-Name: acme" \
 -H "Vipps-System-Version: 3.1.2" \
 -H "Vipps-System-Plugin-Name: acme-webshop" \
@@ -122,7 +123,7 @@ Send request 'Register'
 curl https://apitest.vipps.no/webhooks/v1/webhooks \
 -H "Authorization: Bearer YOUR-ACCESS-TOKEN" \
 -H "Ocp-Apim-Subscription-Key: YOUR-SUBSCRIPTION-KEY" \
--H "Merchant-Serial-Number: 123456" \
+-H "Merchant-Serial-Number: YOUR-MSN" \
 -H "Vipps-System-Name: acme" \
 -H "Vipps-System-Version: 3.1.2" \
 -H "Vipps-System-Plugin-Name: acme-webshop" \
@@ -158,7 +159,7 @@ Send request 'Get All'
 curl https://apitest.vipps.no/webhooks/v1/webhooks \
 -H "Authorization: Bearer YOUR-ACCESS-TOKEN" \
 -H "Ocp-Apim-Subscription-Key: YOUR-SUBSCRIPTION-KEY" \
--H "Merchant-Serial-Number: 123456" \
+-H "Merchant-Serial-Number: YOUR-MSN" \
 -H "Vipps-System-Name: acme" \
 -H "Vipps-System-Version: 3.1.2" \
 -H "Vipps-System-Plugin-Name: acme-webshop" \
@@ -193,7 +194,7 @@ Send request 'Delete Last'
 curl https://apitest.vipps.no/webhooks/v1/webhooks/<WEBHOOK-ID> \
 -H "Authorization: Bearer YOUR-ACCESS-TOKEN" \
 -H "Ocp-Apim-Subscription-Key: YOUR-SUBSCRIPTION-KEY" \
--H "Merchant-Serial-Number: 123456" \
+-H "Merchant-Serial-Number: YOUR-MSN" \
 -H "Vipps-System-Name: acme" \
 -H "Vipps-System-Version: 3.1.2" \
 -H "Vipps-System-Plugin-Name: acme-webshop" \
