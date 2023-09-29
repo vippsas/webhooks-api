@@ -27,6 +27,7 @@ paths:
           in: header
           description: |-
             The merchant serial number, required for merchant login, but optional for ecom-partners.
+            If merchant serial number is included, the partner access the API on behalf of the identified merchant.
             See [HTTP headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers).
           style: simple
           schema:
@@ -105,6 +106,7 @@ paths:
           in: header
           description: |-
             The merchant serial number, required for merchant login, but optional for ecom-partners.
+            If merchant serial number is included, the partner access the API on behalf of the identified merchant.
             See [HTTP headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers).
           style: simple
           schema:
@@ -196,6 +198,7 @@ paths:
           in: header
           description: |-
             The merchant serial number, required for merchant login, but optional for ecom-partners.
+            If merchant serial number is included, the partner access the API on behalf of the identified merchant.
             See [HTTP headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers).
           style: simple
           schema:
