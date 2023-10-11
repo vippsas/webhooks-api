@@ -48,6 +48,6 @@ See [ePayment Webhooks](https://developer.vippsmobilepay.com/docs/APIs/epayment-
 
 | Name       | Event Type                      |
 | ---------- | ------------------------------- |
-| Scanned    | user.checkin.v1                 |
+| CheckedIn  | user.checkin.v1                 |
 
 See [QR Api](https://developer.vippsmobilepay.com/docs/APIs/qr-api/vipps-qr-api/#merchant-callback-qr-codes) for the payload format.
