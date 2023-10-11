@@ -38,7 +38,6 @@ See [ePayment Webhooks](https://developer.vippsmobilepay.com/docs/APIs/epayment-
 | Agreement stopped      | recurring.agreement-stopped.v1       |
 | Agreement expired      | recurring.agreement-expired.v1       |
 | Charge reserved        | recurring.charge-reserved.v1         |
-| Charge refunded        | recurring.charge-refunded.v1         |
 | Charge captured        | recurring.charge-captured.v1         |
 | Charge cancelled       | recurring.charge-canceled.v1         |
 | Charge failed          | recurring.charge-failed.v1           |
