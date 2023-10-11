@@ -19,4 +19,9 @@ To learn about API versioning, see
 ## September 2023
 
 * Partner authentication is now supported, see [Partner webhooks](https://developer.vippsmobilepay.com/docs/APIs/webhooks-api/api-guide#partner-webhooks).
-* Partner can include merchant serial number in header when calling api to impersonate the merchant identified by the header.
+
+## October 2023
+
+* Syncrhonous webhooks are now supported.
+* EventType for Qr callback supported.
+
