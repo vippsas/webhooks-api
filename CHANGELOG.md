@@ -22,6 +22,6 @@ To learn about API versioning, see
 
 ## October 2023
 
-* Syncrhonous webhooks are now supported.
-* EventType for Qr callback supported.
+* Synchronous webhooks are now supported.
+* EventType for QR callback supported.
 
