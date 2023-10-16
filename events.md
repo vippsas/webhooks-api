@@ -49,4 +49,4 @@ See [ePayment Webhooks](https://developer.vippsmobilepay.com/docs/APIs/epayment-
 | ---------- | ------------------------------- |
 | CheckedIn  | user.checkin.v1                 |
 
-See [QR Api](https://developer.vippsmobilepay.com/docs/APIs/qr-api/vipps-qr-api/#merchant-callback-qr-codes) for the payload format.
+See [QR Webhooks](https://developer.vippsmobilepay.com/docs/APIs/qr-api/vipps-qr-api-webhooks/) for the payload format.
