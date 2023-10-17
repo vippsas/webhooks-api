@@ -8,7 +8,7 @@ pagination_prev: null
 
 # Events
 
-Webhooks send out events for the following APIs.
+Webhooks sends out events for the following APIs.
 
 ## ePayment
 
