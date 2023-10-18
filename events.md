@@ -8,11 +8,7 @@ pagination_prev: null
 
 # Events
 
-Webhooks will send out events for the
-[ePayment API](https://developer.vippsmobilepay.com/docs/APIs/epayment-api/features/webhooks).
-In the future, it may also send to other Vipps MobilePay APIs.
-
-The event types to which you can subscribe are shown below.
+Webhooks sends out events for the following APIs.
 
 ## ePayment
 
@@ -43,7 +39,7 @@ See [ePayment Webhooks](https://developer.vippsmobilepay.com/docs/APIs/epayment-
 | Charge failed          | recurring.charge-failed.v1           |
 | Charge creation failed | recurring.charge-creation-failed.v1  |
 
-## Qr
+## QR
 
 | Name       | Event Type                      |
 | ---------- | ------------------------------- |
