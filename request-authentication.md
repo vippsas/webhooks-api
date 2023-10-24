@@ -39,13 +39,11 @@ const dateTime = "Thu, 30 Mar 2023 08:38:32 GMT"
 // Part of the HTTP request header from Vipps MobilePay, found in the field 'authorization'
 const actualSignature = "HMAC-SHA256 SignedHeaders=x-ms-date;host;x-ms-content-sha256&Signature=agAiSyogQbDHpeucoNwYz+yAr5nJ+v+zasdkSbqzv+U="
 
-const httpBody = {
-  "some-unique-content":"ee6e441b-cc4a-46f8-895d-a5af79bcc233/hello-world"
-}
+const httpBody = '{"some-unique-content":"ee6e441b-cc4a-46f8-895d-a5af79bcc233/hello-world"}';
 
 const hashedPayload =  crypto
   .createHash("sha256")
-  .update(JSON.stringify(httpBody))
+  .update(httpBody)
   .digest("base64") // evaluates to 'lNlsp1XA03N34HrQsVzPgJKtC+r7l/RBF4V3JQUWMj4='
 
 const url = new URL(requestUrl)
