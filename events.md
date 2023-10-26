@@ -37,7 +37,8 @@ See [ePayment Webhooks](https://developer.vippsmobilepay.com/docs/APIs/epayment-
 | Charge captured        | recurring.charge-captured.v1         |
 | Charge cancelled       | recurring.charge-canceled.v1         |
 | Charge failed          | recurring.charge-failed.v1           |
-| Charge creation failed | recurring.charge-creation-failed.v1  |
+
+Recurring webhooks payload will be available soon
 
 ## QR
 
