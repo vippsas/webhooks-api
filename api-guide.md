@@ -11,7 +11,7 @@ pagination_next: null
 
 ![Vipps](./images/vipps.png) *Available for Vipps. New event types may be provided in the future.*
 
-![MobilePay](./images/mp.png) *Available for MobilePay in selected markets at the [Vipps MobilePay joint platform launch](https://www.vippsmobilepay.com/#about).*
+![MobilePay](./images/mp.png) *Available for MobilePay in selected markets at the [Vipps MobilePay joint platform launch](https://www.vippsmobilepay.com/about).*
 
 You can use the Webhooks API to get an HTTP notification
 whenever a subscribed event happens, for example a captured payment on the ePayment platform.
