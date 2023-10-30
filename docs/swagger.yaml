@@ -28,7 +28,7 @@ paths:
           description: |-
             The merchant serial number, required for merchant login, but optional for ecom-partners.
             If merchant serial number is included, the partner access the API on behalf of the identified merchant.
-            See [HTTP headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers).
+            See [HTTP headers](https://developer.vippsmobilepay.com/docs/vipps-developers/knowledge-base/http-headers).
           style: simple
           schema:
             type: string
@@ -38,7 +38,7 @@ paths:
           description: |-
             The name of the ecommerce solution.
             One word in lowercase letters is good.
-            See [HTTP headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers).
+            See [HTTP headers](https://developer.vippsmobilepay.com/docs/vipps-developers/knowledge-base/http-headers).
           style: simple
           schema:
             maxLength: 30
@@ -48,7 +48,7 @@ paths:
           in: header
           description: |-
             The version number of the ecommerce solution.
-            See [HTTP headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers).
+            See [HTTP headers](https://developer.vippsmobilepay.com/docs/vipps-developers/knowledge-base/http-headers).
           style: simple
           schema:
             maxLength: 30
@@ -59,7 +59,7 @@ paths:
           description: |-
             The name of the ecommerce plugin (if applicable).
             One word in lowercase letters is good.
-            See [HTTP headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers).
+            See [HTTP headers](https://developer.vippsmobilepay.com/docs/vipps-developers/knowledge-base/http-headers).
           style: simple
           schema:
             maxLength: 30
@@ -69,7 +69,7 @@ paths:
           in: header
           description: |-
             The version number of the ecommerce plugin (if applicable).
-            See [HTTP headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers).
+            See [HTTP headers](https://developer.vippsmobilepay.com/docs/vipps-developers/knowledge-base/http-headers).
           style: simple
           schema:
             maxLength: 30
@@ -107,7 +107,7 @@ paths:
           description: |-
             The merchant serial number, required for merchant login, but optional for ecom-partners.
             If merchant serial number is included, the partner access the API on behalf of the identified merchant.
-            See [HTTP headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers).
+            See [HTTP headers](https://developer.vippsmobilepay.com/docs/vipps-developers/knowledge-base/http-headers).
           style: simple
           schema:
             type: string
@@ -117,7 +117,7 @@ paths:
           description: |-
             The name of the ecommerce solution.
             One word in lowercase letters is good.
-            See [HTTP headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers).
+            See [HTTP headers](https://developer.vippsmobilepay.com/docs/vipps-developers/knowledge-base/http-headers).
           style: simple
           schema:
             maxLength: 30
@@ -127,7 +127,7 @@ paths:
           in: header
           description: |-
             The version number of the ecommerce solution.
-            See [HTTP headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers).
+            See [HTTP headers](https://developer.vippsmobilepay.com/docs/vipps-developers/knowledge-base/http-headers).
           style: simple
           schema:
             maxLength: 30
@@ -138,7 +138,7 @@ paths:
           description: |-
             The name of the ecommerce plugin (if applicable).
             One word in lowercase letters is good.
-            See [HTTP headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers).
+            See [HTTP headers](https://developer.vippsmobilepay.com/docs/vipps-developers/knowledge-base/http-headers).
           style: simple
           schema:
             maxLength: 30
@@ -148,7 +148,7 @@ paths:
           in: header
           description: |-
             The version number of the ecommerce plugin (if applicable).
-            See [HTTP headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers).
+            See [HTTP headers](https://developer.vippsmobilepay.com/docs/vipps-developers/knowledge-base/http-headers).
           style: simple
           schema:
             maxLength: 30
@@ -199,7 +199,7 @@ paths:
           description: |-
             The merchant serial number, required for merchant login, but optional for ecom-partners.
             If merchant serial number is included, the partner access the API on behalf of the identified merchant.
-            See [HTTP headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers).
+            See [HTTP headers](https://developer.vippsmobilepay.com/docs/vipps-developers/knowledge-base/http-headers).
           style: simple
           schema:
             type: string
@@ -209,7 +209,7 @@ paths:
           description: |-
             The name of the ecommerce solution.
             One word in lowercase letters is good.
-            See [HTTP headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers).
+            See [HTTP headers](https://developer.vippsmobilepay.com/docs/vipps-developers/knowledge-base/http-headers).
           style: simple
           schema:
             maxLength: 30
@@ -219,7 +219,7 @@ paths:
           in: header
           description: |-
             The version number of the ecommerce solution.
-            See [HTTP headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers).
+            See [HTTP headers](https://developer.vippsmobilepay.com/docs/vipps-developers/knowledge-base/http-headers).
           style: simple
           schema:
             maxLength: 30
@@ -230,7 +230,7 @@ paths:
           description: |-
             The name of the ecommerce plugin (if applicable).
             One word in lowercase letters is good.
-            See [HTTP headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers).
+            See [HTTP headers](https://developer.vippsmobilepay.com/docs/vipps-developers/knowledge-base/http-headers).
           style: simple
           schema:
             maxLength: 30
@@ -240,7 +240,7 @@ paths:
           in: header
           description: |-
             The version number of the ecommerce plugin (if applicable).
-            See [HTTP headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers).
+            See [HTTP headers](https://developer.vippsmobilepay.com/docs/vipps-developers/knowledge-base/http-headers).
           style: simple
           schema:
             maxLength: 30
