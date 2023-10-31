@@ -46,4 +46,4 @@ Recurring webhooks payload will be available soon
 | ---------- | ------------------------------- |
 | CheckedIn  | user.checked-in.v1                 |
 
-See [QR Webhooks](https://developer.vippsmobilepay.com/docs/APIs/qr-api/vipps-qr-api-webhooks/) for the payload format.
+See [QR Webhooks](https://developer.vippsmobilepay.com/docs/APIs/qr-api/qr-api-webhooks/) for the payload format.
