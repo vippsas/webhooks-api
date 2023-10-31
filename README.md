@@ -25,7 +25,7 @@ given sales unit's Merchant Serial Number.
 The Webhooks API supports:
 
 * [ePayment API](https://developer.vippsmobilepay.com/docs/APIs/epayment-api/)
-* [QR API: Merchant Callback QR codes](https://developer.vippsmobilepay.com/docs/APIs/qr-api/vipps-qr-api/#merchant-callback-qr-codes) (*coming soon*)
+* [QR API: Merchant Callback QR codes](https://developer.vippsmobilepay.com/docs/APIs/qr-api/qr-api-guide/#merchant-callback-qr-codes) (*coming soon*)
 
 ## Next steps
 
