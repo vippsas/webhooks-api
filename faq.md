@@ -40,4 +40,5 @@ Yes.
 
 Example: If a payment is manually refunded on
 [portal.vipps.no](https://portal.vipps.no),
-the Webhooks API will make a request exactly as if the refund was done using the API.
+the Webhooks API will make a request exactly as if the refund was done using the
+ePayment API.
