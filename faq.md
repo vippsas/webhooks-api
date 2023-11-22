@@ -33,3 +33,11 @@ and we are unable to send the callback.
 in 2021. See
 [Transport Layer Security](https://datatracker.ietf.org/wg/tls/about/)
 for more details.
+
+## Are webhooks also sent for manual changes done on portal.vipps.no?
+
+Yes. 
+
+Example: If a payment is manually refunded on
+[portal.vipps.no](https://portal.vipps.no),
+the Webhooks API will make a request exactly as if the refund was done using the API.
