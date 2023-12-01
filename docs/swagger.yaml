@@ -1,7 +1,9 @@
 openapi: 3.0.1
 info:
-  title: Public Webhooks API
-  description: Webhooks API
+  title: Webhooks API
+  description: |-
+    The Webhooks API enables you to get HTTP notifications for subscribed events.
+    See the [Webhooks API Guide](https://developer.vippsmobilepay.com/docs/APIs/webhooks-api/api-guide/) for more details.
   version: v1
 servers:
   - url: https://api.vipps.no/webhooks
