@@ -13,14 +13,22 @@ pagination_next: null
 
 ![MobilePay](./images/mp.png) *Available for MobilePay in selected markets at the [Vipps MobilePay joint platform launch](https://www.vippsmobilepay.com/about).*
 
-You can use the Webhooks API to get an HTTP notification
-whenever a subscribed event happens, for example a captured payment on the ePayment platform.
+The API works this way:
 
-**Note:**
-You can register a set number of webhooks per event type for each sales unit, as described in the
-[API spec][register_webhook_endpoint].
+* You register a webhook URL
+* We send updates and information to the webhook URL you have specified
 
-As an example, to receive a message for each *Authorized* payment, send the following HTTP POST request:
+
+## How to get webhook events
+
+Webhooks can send out [events](events.md) for the Recurring API, ePayment API, and QR API.
+
+You can subscribe to get notifications whenever an event happens.
+For example, if you want to know when a payment is captured, subscribe for this event.
+
+### Code example
+
+To receive a message for each *Authorized* payment, send the following HTTP POST request:
 
 [`POST:/webhooks/v1/webhooks`](https://developer.vippsmobilepay.com/api/webhooks/#tag/v1/paths/~1v1~1webhooks/post)
 
@@ -68,7 +76,7 @@ For example:
 Each API determines the format of their payloads.
 The payload from an ePayment webhook is shown on the [ePayment API: Webhooks page][epayment_events_url].
 
-See [Events](events.md) for a list of all subscribable events.
+
 
 ## Retries
 

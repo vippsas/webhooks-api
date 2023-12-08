@@ -13,6 +13,8 @@ pagination_prev: null
 
 ![MobilePay](./images/mp.png) *Available for MobilePay in selected markets at the [Vipps MobilePay joint platform launch](https://www.vippsmobilepay.com/about).*
 
+## Introduction
+
 The API works this way:
 
 * You register a webhook URL
@@ -22,17 +24,12 @@ You can subscribe to published *event types* by registering webhooks.
 You will then be notified when any matching events are published for the
 given sales unit's Merchant Serial Number.
 
-The Webhooks API supports:
-
-* [ePayment API](https://developer.vippsmobilepay.com/docs/APIs/epayment-api/)
-* [QR API: Merchant Callback QR codes](https://developer.vippsmobilepay.com/docs/APIs/qr-api/qr-api-guide/#merchant-callback-qr-codes) (*coming soon*)
-
-## Next steps
+## Getting started with webhooks
 
 * [API quick start](quick-start.md): Run the basic examples in curl or Postman.
 * [API guide](api-guide.md): Learn about the Webhooks API.
-* [Events](events.md): See the events you can register for.
-* [Request Authentication](request-authentication.md) - Learn how to authenticate the webhooks.
+    * [Events](events.md): See the events you can register for.
+    * [Request Authentication](request-authentication.md) - Learn how to authenticate the webhooks.
 * [API FAQ](faq.md): Look for your question among those people have asked before.
 * [API spec](https://developer.vippsmobilepay.com/api/webhooks/): Go to the endpoint specifications.
 
